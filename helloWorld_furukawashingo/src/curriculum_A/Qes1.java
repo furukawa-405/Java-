@@ -73,11 +73,17 @@ public class Qes1 {
         System.out.println("得点: " + nUmStr + "点");
         
         //問11
-        int x = 15;
-        String result = (x >= 10) ? "OK" : "NG";
+        int a = 10;
+        int b = 20;
+        boolean result = a < b;
         System.out.println(result);
         
         //問12
+        int x = 15;
+        String Result = (x >= 10) ? "OK" : "NG";
+        System.out.println(Result);
+        
+        //問13
         String text = "私はJavaが好きです。Javaは楽しい！";
         String replaced = text.replace("Java", "Python");
         System.out.println(replaced);
