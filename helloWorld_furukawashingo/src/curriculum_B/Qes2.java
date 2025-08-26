@@ -10,17 +10,18 @@ public class Qes2 {
     
     //問2
     int age = 25;
-    if (age >= 20)
-    {System.out.println("適正年齢です");}
-    else if (age <= 30) {System.out.println("適正年齢です");}
-    else {System.out.println("対象外です");}
-	
+    if (age >= 20 && age <= 30) {
+    	System.out.println("適正年齢です");
+    } else {
+		System.out.println("対象外です");
+    }
+    
 	//問3
-    int Age = 18;
-    if (Age >= 20) {System.out.println("成人です");}
-    else if (Age >= 13 && Age <= 19) 
+    int ag = 18;
+    if (ag >= 20) {System.out.println("成人です");}
+    else if (ag >= 13 && ag <= 19) 
     {System.out.println("ティーンエイジャーです");}
-    else if (Age <= 12) {System.out.println("子供です");}
+    else if (ag <= 12) {System.out.println("子供です");}
 	
     //問4
     int x = 30;
@@ -51,8 +52,12 @@ public class Qes2 {
     else if (Score >= 0 && Score <50){System.out.println("不可");}
 	
     //問8
-    String a = "";
-    if (a == ""){System.out.println("入力が無効です");}
+    String input = "";
+    if (input == null || input.equals("")) {
+    	System.out.println("入力が無効です");
+    } else {
+    	System.out.println(input);
+    }
 	
     //問9
     int day = 1;
