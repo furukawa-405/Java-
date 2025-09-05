@@ -1,5 +1,6 @@
 package curriculum_B;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Qes3 {
@@ -91,16 +92,41 @@ public class Qes3 {
 		for (int i = 1; i <= 9; i++) {
 			for (int j = 1; j <= 9; j++) {
 				if (j < 9) {
-					System.out.print(String.format("%02d",i) + " * " + String.format("%02d",j) + " = " + String.format("%02d",i * j) + " || ");
+					System.out.print(String.format("%02d", i) + " * " + String.format("%02d", j) + " = "
+							+ String.format("%02d", i * j) + " || ");
 				} else {
-					System.out.println(String.format("%02d",i) + " * " + String.format("%02d",j) + " = " + String.format("%02d",i * j));
+					System.out.println(String.format("%02d", i) + " * " + String.format("%02d", j) + " = "
+							+ String.format("%02d", i * j));
 					System.out.println();
 				}
 			}
 		}
-		
-		//問12
-		
-	}
 
+		//問12
+		Scanner scanner = new Scanner(System.in);
+		String text = scanner.nextLine();
+		scanner.close();
+		String[] texts = text.split("、");
+		Random random = new Random();
+		int tvNumber = random.nextInt(12);
+		int displayNumber = 11 - tvNumber;
+		for (String i : texts) {
+			int randomNumber = random.nextInt(12);
+			switch (i) {
+				case "パソコン":
+				case "冷蔵庫":
+				case "扇風機":
+				case "洗濯機":
+				case "加湿器":
+				System.out.println(i + "の残り台数は" + randomNumber + "台です");
+				break;
+			case "テレビ":
+			case "ディスプレイ":
+				System.out.println(i.equals("テレビ") ? i + "の残り台数は" + tvNumber + "台です" : i + "の残り台数は" + displayNumber + "台です");
+				break;
+			default:
+				System.out.println("『" + i + "』は指定の商品ではありません");
+			}
+		}
+	}
 }
