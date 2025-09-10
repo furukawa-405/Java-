@@ -75,10 +75,10 @@ public class Qes3 {
 		}
 
 		//問10
-		Scanner mm = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		int l;
 		while (true) {
-			l = mm.nextInt();
+			l = scanner.nextInt();
 			if (l == 0) {
 				System.out.println("終了しました");
 				break;
@@ -86,7 +86,6 @@ public class Qes3 {
 				System.out.println(l);
 			}
 		}
-		mm.close();
 
 		//問11
 		for (int i = 1; i <= 9; i++) {
@@ -103,9 +102,7 @@ public class Qes3 {
 		}
 
 		//問12
-		Scanner scanner = new Scanner(System.in);
 		String text = scanner.nextLine();
-		scanner.close();
 		String[] texts = text.split("、");
 		Random random = new Random();
 		int tvNumber = random.nextInt(12);
@@ -126,6 +123,7 @@ public class Qes3 {
 				break;
 			default:
 				System.out.println("『" + i + "』は指定の商品ではありません");
+		scanner.close();
 			}
 		}
 	}
